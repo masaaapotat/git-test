@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/solid.css"/>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="styles.scss">
+    <link rel="stylesheet" href="css/styles.scss">
 </head>
 
 <body>
@@ -23,11 +23,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="image-fluid">
+                    <img src="img/logo.png" class="image-fluid" alt="Nucamp Logo">
                 </div>
                 <div class="col">
                     <h1>Nucamp</h1>
                     <h2>a better way to camp</h2>
+                </div>
+                <div class="col-2 d-flex justify-content-end align-items-center">
+                    <a href="#reserveForm" class="btn btn-info text-white">Reserve Campsite</a>
                 </div>
             </div>
         </div>
@@ -164,6 +167,47 @@
             . . .
 
         </section>
+         <!-- Reservation Form Section -->
+         <section class="row row-content">
+            <div class="col-12 col-md-9 mx-auto">
+                <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row mb-3">
+                                <label for="numberOfCampers" class="col-form-label col">Number of Campers</label>
+                                <div class="col">
+                                    <select class="form-select" id="numberOfCampers" name="numberOfCampers">
+                                        <option selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-form-label col">Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" id="date" name="date"
+                                        placeholder="Select Date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 
     </main>
 
