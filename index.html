@@ -29,9 +29,10 @@
                     <h1>Nucamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col-2 d-flex justify-content-end align-items-center">
-                    <a href="#reserveForm" class="btn btn-info text-white">Reserve Campsite</a>
-                </div>
+                <!-- Connect the "Reserve Campsite" button to the new modal -->
+<div class="col-2 d-flex justify-content-end align-items-center">
+    <button type="button" class="btn btn-info text-white text-nowrap" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Campsite</button>
+</div>
             </div>
         </div>
     </header>
@@ -53,8 +54,8 @@
                      Contact</a>
                     </li>
                 </ul>
-                <span class="navbar-text ml-auto">
-                    <a  role="button" data-bs-toggle="modal" data-bs-target="#loginmodal" href="">
+                <span class="navbar-text ms-auto">
+                    <a role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-right-to-bracket"></i> Login
                     </a>
                 </span>
@@ -103,6 +104,58 @@
             </div>
         </div>
     </div>
+    <!-- New modal for reservation form -->
+<div class="modal" id="reserveModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">Reserve a Campsite</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Placeholder for reservation form content -->
+                <div class="container-fluid">
+                    <!-- reservation form content will go here -->
+                    <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post" id="reserveForm">
+                            <div class="row mb-3">
+                                <label for="numberOfCampers" class="col-form-label col">Number of Campers</label>
+                                <div class="col">
+                                    <select class="form-select" id="numberOfCampers" name="numberOfCampers">
+                                        <option selected>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="date" class="col-form-label col">Date</label>
+                                <div class="col">
+                                    <input type="date" class="form-control" id="date" name="date"
+                                        placeholder="Select Date">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                                                                    
+                            </div>
+                        </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
 
     <!-- main section -->
     <main class="container">
@@ -130,21 +183,22 @@
 
         </section>
 
-        <!-- feature section -->
+        <!-- Featured Campsites Section -->
         <section class="row row-content align-items-center">
-            <div class="class col-sm-4 col-md-3">
-
+            <div class="col-sm-4 col-md-3">
                 <h2 class="text-sm-end">Featured Campsites</h2>
-
             </div>
             <div class="col">
-
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the
-                    shores of the pristine React Lake is a favorite for fly fishers.</p>
-
+                
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground
+                            on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img src="img/react-lake-thumb.jpg" alt="React Lake Campground" class="img-thumbnail ms-auto mb-3">
+                </div>
             </div>
-
         </section>
 
         <!-- partner section -->
@@ -168,12 +222,12 @@
 
         </section>
          <!-- Reservation Form Section -->
-         <section class="row row-content">
+         <!-- <section class="row row-content" >
             <div class="col-12 col-md-9 mx-auto">
-                <div class="card">
-                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-                    <div class="card-body">
-                        <form id="reserveForm">
+                <div class="card" >
+                    <h3 class="card-header ">Reserve a Campsite</h3>
+                    <div class="card-body"> -->
+                        <!-- <form id="reserveForm">
                             <div class="row mb-3">
                                 <label for="numberOfCampers" class="col-form-label col">Number of Campers</label>
                                 <div class="col">
@@ -200,11 +254,11 @@
                                     <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </form> -->
+                    <!-- </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </main>
 
