@@ -48,11 +48,59 @@
                     </li>
                     <li><a class="nav-link" href="#"> <i class="fa-solid fa-list fa-lg"></i> Sites</a></li>
                     <li><a class="nav-link" href="contactus.html"> <i class="fa-solid fa-address-book fa-lg"></i>
-                            Contact</a></li>
+                     Contact</a>
+                    </li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a  role="button" data-bs-toggle="modal" data-bs-target="#loginmodal" href="">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+    <!-- login modal -->
+    <div class="modal fade" id="loginModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="row">
+                                <div class="mb-3 col-12">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter email">
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                        placeholder="Password">
+                                </div>
+                                <div class="col">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- main section -->
     <main class="container">
@@ -70,7 +118,8 @@
                     <div class="align-center">
                         <h3>Our Campsites</h3>
 
-                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your ownreviews!</p>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
+                            ownreviews!</p>
                     </div>
                 </div>
 
@@ -108,11 +157,12 @@
                     <img class="me-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
                     <div class="align-self-center">
                         <h3>Bootstrap Outfitters</h3>
-                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you
+                            can't beat.</p>
                     </div>
                 </div>
             </div>
-. . .
+            . . .
 
         </section>
 
